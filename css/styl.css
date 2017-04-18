@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box; }
+
+#content {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1080px; }
+  #content h1 {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto; }
+  #content #input-container {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    border: 1px dashed #939393; }
+    #content #input-container .input-box {
+      display: inline-block;
+      width: 35%;
+      margin: 0 4%; }
+      #content #input-container .input-box h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 25px; }
+      #content #input-container .input-box form {
+        text-align: left;
+        font-size: 20px; }
+      #content #input-container .input-box select, #content #input-container .input-box input {
+        width: 200px;
+        height: 21px;
+        float: right; }
+      #content #input-container .input-box p {
+        position: absolute;
+        bottom: 10px; }
+    #content #input-container #submit {
+      display: block;
+      margin: 30px auto;
+      height: 30px;
+      width: 300px;
+      font-size: 16px;
+      font-weight: bold; }
+    #content #input-container #error-log {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      color: red; }
+  #content #table-area {
+    margin: 10px auto;
+    border: 1px dashed #939393; }
+    #content #table-area #table-data {
+      width: 90%;
+      margin: 40px auto 100px auto; }
+      #content #table-area #table-data tr {
+        height: 25px; }
+      #content #table-area #table-data th {
+        font-weight: bold;
+        font-size: 15px;
+        border: 1px solid #939393; }
+      #content #table-area #table-data td {
+        border: 1px dashed #939393;
+        text-align: center; }
+  #content #buttons-csv {
+    width: 100%;
+    text-align: center; }
+    #content #buttons-csv button {
+      width: 200px;
+      height: 30px;
+      margin: 20px;
+      font-weight: bold; }
+
+/*# sourceMappingURL=styl.css.map */

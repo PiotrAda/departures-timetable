@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <title>Departures Timetable</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" href="css/styl.css" type="text/css" />
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+
+	<div id="content">
+
+    <div id="input-container">
+
+      <h1>Add new connection</h1>
+
+      <div class="input-box">
+        <h2>Departure data</h2>
+        <form>Station:
+          <select class="location" id="departure-location">
+            <option disabled selected value></option>
+      			<option value="warszawa">Warszawa</option>
+      			<option value="krakow">Krakow</option>
+      			<option value="gdansk">Gdansk</option>
+      			<option value="poznan">Poznan</option>
+      		</select>
+        </form>
+        <form>Departure date: <input type="text" class="date" id="departure-date"/></form>
+        <form>Departure hour: <input type="text" class="hour" id="departure-hour" /></form>
+      </div>
+
+      <div class="input-box">
+        <h2>Arrival data</h2>
+        <form>Station:
+          <select class="location" id="arrival-location">
+            <option disabled selected value></option>
+      			<option value="warszawa">Warszawa</option>
+      			<option value="krakow">Krakow</option>
+      			<option value="gdansk">Gdansk</option>
+      			<option value="poznan">Poznan</option>
+      		</select>
+        </form>
+        <form>Arrival date: <input type="text" class="date" id="arrival-date"/></form>
+        <form>Arrival hour: <input type="text" class="hour" id="arrival-hour" /></form>
+      </div>
+
+      <button id="submit">submit connection</button>
+
+      <div id="error-log">
+        <p id="location-error"></p>
+        <p id="date-error"></p>
+        <p id="hour-error"></p>
+        <p id="general-error"></p>
+      </div>
+
+    </div>
+
+    <div id="table-area">
+
+      <h1>Current connections</h1>
+
+      <table id="table-data">
+        <thead>
+          <tr>
+            <th>dep. city</th>
+            <th>dep. date</th>
+            <th>dep. hour</th>
+            <th>arr. city</th>
+            <th>arr. date</th>
+            <th>arr. hour</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="buttons-csv">
+      <button href="#" id="csv-import">Import .csv</button>
+      <button href="#" id="csv-export">Export .csv</button>
+    </div>
+
+  </div>
+
+	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/export-csv.js"></script>
+
+</body>
+
+</html>
