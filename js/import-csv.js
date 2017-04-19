@@ -4,7 +4,7 @@ $(document).ready(function(){
     $.ajax({
       url: 'data/table.csv',
       dataType: 'text',
-    }).done(successFunction);
+    }).done(successFunction(data));
   });
 
   function successFunction (){
