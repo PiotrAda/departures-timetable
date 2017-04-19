@@ -1,5 +1,5 @@
 dep. city,dep. date,dep. hour,arr. city,arr. date,arr. hour
-Gdansk,04/02/2017,12:00,Poznan,04/27/2017,13:00
-Gdansk,04/02/2017,12:00,Poznan,04/27/2017,13:00
-Gdansk,04/02/2017,12:00,Poznan,04/27/2017,13:00
-Gdansk,04/02/2017,12:00,Poznan,04/27/2017,13:00
+Krakow,04/02/2017,10:00,Warszawa,04/02/2017,14:00
+Warszawa,04/05/2017,06:45,Poznan,04/05/2017,11:20
+Gdansk,04/12/2017,14:00,Krakow,04/12/2017,20:15
+Poznan,04/16/2017,22:30,Gdansk,04/17/2017,06:00

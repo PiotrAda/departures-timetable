@@ -4,15 +4,15 @@ $(document).ready(function(){
     $.ajax({
       url: 'data/table.csv',
       dataType: 'text',
-    }).done(successFunction(data));
+    }).done(successFunction);
   });
 
-  function successFunction (){
+  function successFunction (data){
     var allRows = data.split(/\r?\n|\r/);
     var table = '<table id="table-data">';
 
-    for (var singleRow = 0 ; singleRow < allRows.length ; singleRow++){
-      if (singleRow == 0){
+    for (var singleRow = 0 ; singleRow < allRows.length-1 ; singleRow++){
+      if (singleRow === 0){
         table += '<thead>';
         table += '<tr>';
       } else {
@@ -20,17 +20,17 @@ $(document).ready(function(){
       }
       var rowCells = allRows[singleRow].split(',');
       for (var rowCell = 0 ; rowCell < rowCells.length ; rowCell++){
-        if (singleRow == 0){
+        if (singleRow === 0){
           table += '<th>';
-          table += rowCells;
+          table += rowCells[rowCell];
           table += '</th>';
         } else {
           table += '<td>';
-          table += rowCells;
+          table += rowCells[rowCell];
           table += '</td>';
         }
       }
-      if (singleRow == 0){
+      if (singleRow === 0){
         table += '</tr>';
         table += '</thead>';
         table += '<tbody>';
@@ -40,7 +40,9 @@ $(document).ready(function(){
     }
     table += '</tbody>';
     table += '</table>';
-    $('table-data').replaceWith(table);
+    console.log(table);
+
+    $('#table-data').replaceWith(table);
   };
 
 });
